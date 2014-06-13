@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pig_latin/0.0.1'
+require 'pig_latin/VERSION'
 
 Gem::Specification.new do |spec|
   spec.name          = "pig_latin"
