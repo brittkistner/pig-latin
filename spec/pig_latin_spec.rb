@@ -13,8 +13,9 @@ describe 'Translator' do
   end
 
   describe '.translate_word' do
-    it "translates a word with a consonant as the first letter to pig latin" do
-      expect(PigLatin::Translator.translate_word("hello")).to eq("ellohay")
+
+    it "translates a word with a consonant at the beginning and 'y' in the middle to pig latin" do
+      expect(PigLatin::Translator.translate_word("my")).to eq("ymay")
     end
 
     it "translates a word with a vowel as the first letter to pig latin" do
@@ -22,9 +23,12 @@ describe 'Translator' do
     end
 
     it "translates a word with 'y' as the first letter to pig latin" do
-      expect(PigLatin::Translator.translate_word("yellow")).to eq("ellowyay")
+      expect(PigLatin::Translator.translate_word("yay")).to eq("ayyay")
     end
-    #doesn't work for yay
+
+    it "translates a word with a consonant as the first letter to pig latin" do
+      expect(PigLatin::Translator.translate_word("hello")).to eq("ellohay")
+    end
   end
 
 end
